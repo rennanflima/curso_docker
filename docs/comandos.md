@@ -59,6 +59,38 @@ Remover container após a parada:
 $ docker run --rm <container>
 ```
 
+### Volumes
+
+Volumes anônimos
+
+```
+$ docker run -v /data
+```
+
+Volumes nomeados (named volume)
+
+```
+$ docker run -v <nome_volume>:/<caminho_onde_salva_arquivos>
+```
+
+Bind mounts (o diretório fica no host).
+
+```
+$ docker run -v <diretorio_host>:/<caminho_onde_salva_arquivos>
+```
+
+O Bind mounts pode ser utilizado para atualização em tempo real do projeto
+
+```
+$ docker run -v <diretorio_base_host>:/<workdir>
+```
+
+Listar todos os volumes:
+
+```
+$ docker volume ls
+```
+
 ## Comando `stop`: Parar containers
 
 
