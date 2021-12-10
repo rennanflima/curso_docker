@@ -79,18 +79,48 @@ Bind mounts (o diretório fica no host).
 $ docker run -v <diretorio_host>:/<caminho_onde_salva_arquivos>
 ```
 
-O Bind mounts pode ser utilizado para atualização em tempo real do projeto
+O Bind mounts pode ser utilizado para atualização em tempo real do projeto, durante o processo de desenvolvimento
 
 ```
 $ docker run -v <diretorio_base_host>:/<workdir>
 ```
 
-Listar todos os volumes:
+Volume apenas de leitura:
+```
+$ docker run -v <nome_volume>:/<caminho_onde_salva_arquivos>:ro
+```
+
+> Este `:ro` é a abreviação de read only.
+
+Listar todos os volumes (anônimos e nomeados):
 
 ```
 $ docker volume ls
 ```
 
+Criar um volume nomeado:
+
+```
+$ docker volume create <nome>
+```
+
+Checar um volume:
+
+```
+$ docker volume inspect <nome>
+```
+
+Remover um volume
+
+```
+$ docker volume rm <nome>
+```
+
+Removendo volumes não utilizados
+
+```
+$ docker volume prune
+```
 ## Comando `stop`: Parar containers
 
 
