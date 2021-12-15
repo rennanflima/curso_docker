@@ -110,13 +110,13 @@ Checar um volume:
 $ docker volume inspect <nome>
 ```
 
-Remover um volume
+Remover um volume:
 
 ```
 $ docker volume rm <nome>
 ```
 
-Removendo volumes não utilizados
+Removendo volumes não utilizados:
 
 ```
 $ docker volume prune
@@ -124,6 +124,61 @@ $ docker volume prune
 
 ### Networks
 
+Listar todas as redes do ambiente:
+
+```
+$ docker network ls
+```
+
+Criar rede (default: bridge):
+
+```
+$ docker network create <nome>
+```
+
+Criar rede com driver diferente do bridge:
+
+```
+$ docker network create -d <driver> <nome>
+```
+
+Remover rede:
+
+```
+$ docker network rm <nome>
+```
+
+Remover redes em massa:
+
+```
+$ docker network prume
+```
+
+Para especificar a um container a network utilizar a flag `--network`:
+
+```
+$ docker run --network <nome_network>
+```
+
+> Conectar um container com a um banco que está rodando no host onde o container está rodando, no IP de host utilizamos: `host.docker.internal`.
+
+Conectar um container a uma rede:
+
+```
+$ docker network connect <nome_network> <container>
+```
+
+Desconectar um container a uma rede:
+
+```
+$ docker network disconnect <nome_network> <container>
+```
+
+Inspecionar uma rede:
+
+```
+$ docker network inspect <nome_network>
+```
 
 ## Comando `stop`: Parar containers
 
