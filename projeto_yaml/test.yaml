@@ -1,0 +1,44 @@
+# Instruções para o programa
+nome: "Mateus"
+idade: 30 # Esta é a idade do usuário
+
+# Este objeto descreve o nosso projeto
+objeto:
+    versao: 2
+    arquivo: "teste.text"
+
+# Números
+versao: 2 # Int
+versao_completa: 3.14 # Float
+
+# Strings
+string_sem_aspas: Digite um texto arquivo
+texto: "Este também é um texto válido para o YAML"
+
+# Valores nulos
+nulo: ~
+nulo_dois: null
+
+# Booleano
+verdadeiro: True
+verdadeiro_dois: On
+
+falso: False
+falso_dois: Off
+
+# Listas
+lista: [1, 2, 3, 4, 5]
+lista_dois:
+    - "teste"
+    - 10
+    - outro teste
+    - True
+
+# Dicionários
+obj: {a: 1, b: 2, c: 3, obj_interno: {a: 1}}
+obj_dois:
+    a: 1
+    b: 2
+    c: 3
+    obj_interno:
+        x: 2
